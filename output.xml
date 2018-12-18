@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.0.4 (Python 3.7.1 on win32)" generated="20181202 12:21:09.703">
+<suite id="s1" name="Selenium" source="C:\Testware\Workspaces\RED\Selenium">
+<suite id="s1-s1" name="Gökhan" source="C:\Testware\Workspaces\RED\Selenium\Gökhan">
+<suite id="s1-s1-s1" name="NS" source="C:\Testware\Workspaces\RED\Selenium\Gökhan\NS.robot">
+<test id="s1-s1-s1-t1" name="TC6 - Koop kaartje">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the given ``url``.</doc>
+<arguments>
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+</arguments>
+<msg timestamp="20181202 12:21:10.047" level="INFO">Opening browser 'chrome' to base url 'https://www.ns.nl/producten/s/enkele-reis'.</msg>
+<status status="PASS" starttime="20181202 12:21:10.046" endtime="20181202 12:21:15.065"></status>
+</kw>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<doc>Waits until element ``locator`` is visible.</doc>
+<arguments>
+<arg>r42CookieBar</arg>
+</arguments>
+<status status="PASS" starttime="20181202 12:21:15.065" endtime="20181202 12:21:15.350"></status>
+</kw>
+<kw name="Select Frame" library="SeleniumLibrary">
+<doc>Sets frame identified by ``locator`` as the current frame.</doc>
+<arguments>
+<arg>r42CookieBar</arg>
+</arguments>
+<msg timestamp="20181202 12:21:15.351" level="INFO">Selecting frame 'r42CookieBar'.</msg>
+<status status="PASS" starttime="20181202 12:21:15.351" endtime="20181202 12:21:15.383"></status>
+</kw>
+<kw name="Click Link" library="SeleniumLibrary">
+<doc>Clicks a link identified by ``locator``.</doc>
+<arguments>
+<arg>//a[@href="javascript:send('popup_accept')"]</arg>
+</arguments>
+<msg timestamp="20181202 12:21:15.384" level="INFO">Clicking link '//a[@href="javascript:send('popup_accept')"]'.</msg>
+<status status="PASS" starttime="20181202 12:21:15.384" endtime="20181202 12:21:15.569"></status>
+</kw>
+<kw name="Unselect Frame" library="SeleniumLibrary">
+<doc>Sets the main frame as the current frame.</doc>
+<status status="PASS" starttime="20181202 12:21:15.570" endtime="20181202 12:21:15.583"></status>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20181202 12:21:15.583" endtime="20181202 12:21:17.847"></status>
+</kw>
+<status status="PASS" starttime="20181202 12:21:10.046" endtime="20181202 12:21:17.848" critical="yes"></status>
+</test>
+<status status="PASS" starttime="20181202 12:21:09.822" endtime="20181202 12:21:17.850"></status>
+</suite>
+<status status="PASS" starttime="20181202 12:21:09.820" endtime="20181202 12:21:17.857"></status>
+</suite>
+<status status="PASS" starttime="20181202 12:21:09.777" endtime="20181202 12:21:17.862"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0">Critical Tests</stat>
+<stat pass="1" fail="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" id="s1" name="Selenium">Selenium</stat>
+<stat pass="1" fail="0" id="s1-s1" name="Gökhan">Selenium.Gökhan</stat>
+<stat pass="1" fail="0" id="s1-s1-s1" name="NS">Selenium.Gökhan.NS</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
