@@ -3,8 +3,8 @@ Library    SeleniumLibrary
 
 *** Variables ***
 ${BROWSER}    chrome
-${SELENIUM_SPEED}           3  
-${SELENIUM_IMPLICIT_WAIT}   3
+${SELENIUM_SPEED}           4  
+${SELENIUM_IMPLICIT_WAIT}   4
 
 *** Test Cases ***
 TC4 - Login
