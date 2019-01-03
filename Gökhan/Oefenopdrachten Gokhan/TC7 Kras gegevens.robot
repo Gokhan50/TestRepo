@@ -11,6 +11,23 @@ ${CODE_P}                   P_2019_05
 ${CODE_PICKUP}              1h39635_0_AA_6800
 ${TITLE_BASE}               Welkom bij Kras!
 ${TITLE_BUSREIS}            Busreis In het spoor van de Ottomanen
+${FIRSTNAME_1}              Gokhan
+${LASTNAME_1}               Gurbuz
+${SELECT_BOX_DATE_1}        30
+${SELECT_BOX_MONTH_1}       07
+${SELECT_BOX_YEAR_1}        1985
+${FIRSTNAME_2}              Sevim
+${LASTNAME_2}               Gurbuz-Karadas
+${SELECT_BOX_DATE_2}        09
+${SELECT_BOX_MONTH_2}       04
+${SELECT_BOX_YEAR_2}        1989
+${POSTALCODE}               6826HC
+${NUMBER}                   78
+${ADDITION}                 3
+${EMAIL}                    sg.gurbuz50@hotmail.com
+${PHONE}                    0634623434
+${PHONE_HOME}               0634623434
+
 
 *** Test Cases ***
 TC6 – Boek vakantie
@@ -23,7 +40,8 @@ TC6 – Boek vakantie
     # Given Boek nu
     Given Plaats van vertrek
     Given Kamer toevoegen 
-    Close Browser
+    Given Vul uw gegevens in
+    # Close Browser
 
 *** Keywords ***
 Initaliseer Selenium
@@ -64,4 +82,27 @@ Plaats van vertrek
 Kamer toevoegen 
     Click Element    //div[@class="cta"]
     Click Element    //div[@class="cta booknext flR mT10 mB20"]
+    
+Vul uw gegevens in         
+    Click Element    //label[@for="pax_title_11"]
+    Input Text    //input[@name="pax_firstname_1"]    ${FIRSTNAME_1}
+    Input Text    //input[@name="pax_lastname_1"]    ${LASTNAME_1}
+    Select From List By Value    xpath=(//select)[5]    ${SELECT_BOX_DATE_1} 
+    Select From List By Value    xpath=(//select)[6]   ${SELECT_BOX_MONTH_1} 
+    Select From List By Value    xpath=(//select)[7]    ${SELECT_BOX_YEAR_1} 
+    Click Element    //label[@for="pax_title_22"]
+    Input Text    //input[@name="pax_firstname_2"]    ${FIRSTNAME_2}
+    Input Text    //input[@name="pax_lastname_2"]    ${LASTNAME_2}
+    Select From List By Value    xpath=(//select)[8]    ${SELECT_BOX_DATE_2} 
+    Select From List By Value    xpath=(//select)[9]    ${SELECT_BOX_MONTH_2} 
+    Select From List By Value    xpath=(//select)[10]    ${SELECT_BOX_YEAR_2}
+    Click Element    xpath=(//li[@class="radio"])[5]
+    Input Text    //input[@name="deb_postalcode"]    ${POSTALCODE} 
+    Input Text    //input[@name="deb_number"]    ${NUMBER}
+    Input Text    //input[@name="deb_addition"]    ${ADDITION}
+    Input Text    //input[@name="deb_email"]    ${EMAIL}
+    Input Text    //input[@name="deb_phone"]   ${PHONE} 
+    Click Element    xpath=(//fieldset)[4]
+    Input Text    //input[@name="bd_phonehome"]    ${PHONE_HOME}
+    Click Element    xpath=(//div[@class="formRow"])[10]
     
